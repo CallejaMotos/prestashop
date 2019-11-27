@@ -26,4 +26,21 @@
 
 {block name='product_list_header'}
     {include file='catalog/_partials/category-header.tpl' listing=$listing category=$category}
+    <!-- add for mobile category navigation -->
+    {if isset($subcategories)}
+    <!-- Subcategories -->
+        <div id="subcategories">
+            <p class="subcategory-heading">{l s='Subcategories'}</p>
+            <ul class="clearfix">
+                {foreach from=$subcategories item=subcategory}
+                    <li class="each_subcategory">
+                        <div class="button_cont" align="center"><a class="example_e" href="{$link->getCategoryLink($subcategory.id_category, $subcategory.link_rewrite)|escape:'html':'UTF-8'}" rel="nofollow noopener">{$subcategory.name|truncate:25:'...'|escape:'html':'UTF-8'}</a>
+                        </div>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+    <!-- Subcategories -->    
+    {/if}
+    <!-- add for mobile category navigation -->
 {/block}

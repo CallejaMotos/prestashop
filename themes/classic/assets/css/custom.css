@@ -2,9 +2,65 @@
  * Custom code goes here.
  * A template should always ship with an empty custom.css
  */
- #header .header-top .position-static {
+#header .header-top .position-static {
      display: none;
  }
 
- #product .breadcrumb {display:none;}
+#product .breadcrumb {
+     display:none;
+}
+#subcategories {
+     display: none;
+}
+
+@media only screen and (max-width:999px) {
+
+   #subcategories {
+          display: block;
+       }
+       .block-categories{
+          display: none;
+       }
+       .clearfix {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          align-content:flex-start;
+      }
+     
+      .square_name_subcategory{
+         padding: 1em;
+         border: 1px solid grey;
+         margin: 1em;
+         background-color: white;
+      }
+      .each_subcategory{
+          width: 100%;
+      }
+     
+      .example_e {
+         border: none;
+         background: white;
+         color: black !important;
+         font-weight: 100;
+         padding: 20px;
+         text-transform: uppercase;
+         border-radius: 6px;
+         display: flex;
+         transition: all 0.3s ease 0s;
+         margin: 0.25em;
+         }
+     
+      .example_e:hover {
+         color: white !important;
+         font-weight: 700 !important;
+         letter-spacing: 3px;
+         background: #404040;
+         -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+         transition: all 0.3s ease 0s;
+         }
+     }
  
