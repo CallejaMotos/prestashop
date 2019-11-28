@@ -28,6 +28,7 @@
     {if $nodes|count}
       <ul class="category-sub-menu">
         {foreach from=$nodes item=node}
+          {if $node.id < 2019115079}
           <li data-depth="{$depth}">
             {if $depth===0}
               <a href="{$node.link}">{$node.name}</a>
@@ -53,6 +54,7 @@
               {/if}
             {/if}
           </li>
+          {/if}
         {/foreach}
       </ul>
     {/if}
