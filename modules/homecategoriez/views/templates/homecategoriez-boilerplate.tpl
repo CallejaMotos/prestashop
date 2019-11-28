@@ -12,6 +12,7 @@
     <h4>{l s='Popular categories' mod='homecategoriez'}</h4>
     <ul class="row">
         {foreach from=$categories item=category name=homeCategory}
+        {if $category->id_category < 174} 
             {assign var='categoryLink' value=$link->getcategoryLink($category->id_category, $category->link_rewrite)}
             {assign var='imageLink' value=$link->getCatImageLink($category->link_rewrite, $category->id_category, $pic_size_type)}
             <li class="col-xs-12 col-sm-6 col-lg-2">
@@ -44,8 +45,9 @@
                     </a>
                 </p>
             </li>
+            {/if}
         {foreachelse}
-            {l s='No categories' mod='homecategoriez'}
+            {l s='No categories' mod='homecategoriez'}        
         {/foreach}
     </ul>
 </div>
